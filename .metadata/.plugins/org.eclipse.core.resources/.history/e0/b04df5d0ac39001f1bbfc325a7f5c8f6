@@ -1,0 +1,14 @@
+package com.kh.practice;
+
+class DateClass03<L, R>{
+	
+}
+
+public class MultiGenericRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

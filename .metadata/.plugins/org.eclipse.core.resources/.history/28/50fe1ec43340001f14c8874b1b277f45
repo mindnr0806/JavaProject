@@ -1,0 +1,24 @@
+package com.kh.ch14_collection;
+
+public class MapRun {
+
+
+		/*
+		 * Map<K,V> : key-value 형식으로 데이터를 관리하는 콜랙션
+		 * => List, Set 과는 달리 Collection을 구현한 클래스는 아님
+		 * 	(메소드가 일부 다름)
+		 */
+
+	
+	
+	Class Snack{
+		private String flavor;
+		private int calory;
+		
+		public Snack(String flavor, int calory) {
+			this.flavor=flavor;
+			this.calory=calory;
+		}
+	}
+
+}

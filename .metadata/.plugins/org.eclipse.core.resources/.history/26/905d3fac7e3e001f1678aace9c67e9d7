@@ -1,0 +1,11 @@
+package com.kh.practice.udp;
+
+public class UDPServer {
+
+	public static void main(String[] args) {
+		// 1.IP(PC에 지정되어있음)/포트(!!)
+		
+
+	}
+
+}

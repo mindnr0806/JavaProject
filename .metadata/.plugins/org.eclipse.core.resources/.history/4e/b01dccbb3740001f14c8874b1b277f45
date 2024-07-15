@@ -1,0 +1,6 @@
+package com.kh.ch15_thread;
+
+public class MyThread2 implements Runnable{
+
+
+}

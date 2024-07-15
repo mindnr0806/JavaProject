@@ -1,0 +1,12 @@
+package com.kh.ch14_collection;
+
+public class SetRun {
+
+	public static void main(String[] args) {
+		/*
+		 * Set : 순서가 없고, 중복도 어훃되지 않음
+		 * 
+		 */
+	}
+
+}

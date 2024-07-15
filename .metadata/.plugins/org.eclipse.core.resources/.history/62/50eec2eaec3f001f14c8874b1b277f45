@@ -1,0 +1,9 @@
+package com.kh.ch09_polymorphism;
+
+public class Son extends Parent{
+	//int x;
+	//int y;
+	
+	
+
+}

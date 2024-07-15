@@ -1,0 +1,14 @@
+package com.kh.ch14_collection;
+
+public class ArrayLisrRun {
+
+	public static void main(String[] args) {
+		/*
+		 * *컬랙션 : 자료구조 개념이 내장되어 있는 클래스
+		 * 			자바에서 기본적으로 제공되는 "자료구조" 담당 "프레임워크"
+		 * 
+		 */
+
+	}
+
+}

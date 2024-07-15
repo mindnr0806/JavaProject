@@ -1,0 +1,8 @@
+package com.kh.practice.map.view;
+
+import java.util.Scanner;
+
+public class MemberMenu {
+
+	private Scanner sc = new Scanner(in System);
+}

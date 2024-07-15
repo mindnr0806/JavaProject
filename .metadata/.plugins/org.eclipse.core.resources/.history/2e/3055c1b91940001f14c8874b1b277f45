@@ -1,0 +1,17 @@
+package com.kh.ch11_api;
+
+public class API02_String {
+
+		public static void main(String[] args) {
+			System.out.println("====java.lang.String=====");
+			
+			String str = "Hello, World!";
+			
+			System.out.println(str);
+			
+			//문자열.charAt(dlseprtm) : char
+			// => 문자열에서 해당 인덱스 위치의 문자를 추ㅜㅊㄹ해서 반환
+			System.out.println("인덱스 7본 위치의 문자 : " + str.charAt(7));
+			
+		}
+}

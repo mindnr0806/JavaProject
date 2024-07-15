@@ -1,0 +1,14 @@
+package com.kh.ch05_object;
+
+public class ObjectRun {
+
+	public static void main(String[] args) {
+		/*
+		 * *객체 : 현실 세계에 독립적으로 존재하는 것들(목적/가치/의미가 있는 유형/무형/개녕 등)
+		 * 
+		 * 	
+		 */
+	
+	}
+
+}

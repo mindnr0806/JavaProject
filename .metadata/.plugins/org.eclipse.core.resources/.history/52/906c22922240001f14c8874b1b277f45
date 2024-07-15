@@ -1,0 +1,15 @@
+package com.kh.ch12_IO;
+
+public class IORun {
+
+	public static void main(String[] args) {
+		/*
+		 * *입출력(IO) : 프로그램 상의 데이터를 외부메세지로 출력하거나(프로그램->외부매채)
+		 * 				외부매채부터 입력받아온는 과정 (외부매채 -> 프로그램 )
+		 * --> 외부 매채와의 연결되는 통로 역할 : 스트림
+		 * 
+		 */
+
+	}
+
+}

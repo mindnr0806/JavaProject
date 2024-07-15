@@ -1,0 +1,6 @@
+package com.kh.practice.set.model.compare;
+
+public abstract class SortedLottery {
+	public abstract int compare(Object o1, Object o2);
+
+}

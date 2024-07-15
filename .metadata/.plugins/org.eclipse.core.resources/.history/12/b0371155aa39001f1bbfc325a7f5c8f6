@@ -1,0 +1,25 @@
+package com.kh.practice;
+
+class Dateclass02{
+	//재네릭 메소드
+	public <T> void test(Integer num) {
+		T date; //메소드, 지역변수에 재네릭 적용(사용)
+		
+		date = (T)num; //형변환도 가능!
+	}
+	public <T> T test2(T date) {//재네릭을 반환타입, 매개변수 타입에 적용
+		T t;
+		t = date;
+		return date;
+	}
+}
+
+
+public class GenericMethodRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

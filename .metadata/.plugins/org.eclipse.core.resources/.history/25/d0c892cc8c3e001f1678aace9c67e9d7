@@ -1,0 +1,8 @@
+package com.kh.practice.tcp;
+
+public class TCPClient1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	}
+}

@@ -1,0 +1,12 @@
+package com.kh.ch05_object;
+
+public class Studer {
+	
+	//필드부
+		private String name;
+		
+	//생성자부
+		
+		
+	//메소드부	
+}

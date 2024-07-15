@@ -1,0 +1,13 @@
+package com.kh.ch11_api;
+
+public class API02_String {
+
+		public static void main(String[] args) {
+			System.out.println("====java.lang.String=====");
+			
+			String str = "Hello, World!";
+			
+			System.out.println(str);
+			
+		}
+}

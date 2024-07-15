@@ -1,0 +1,17 @@
+package com.kh.ch04_inheritance;
+
+public class InheritRun {
+
+	public static void main(String[] args) {
+		/*
+		 * * 상속 : 부모타입에서 가지고 있는 "맴버(변수/메소드)" 를 자식 클래스에서
+		 * 			직접 만들지 않고 상속받아 자신의 맴버(변수/메소드)처럼 사용할 수 있는 기능
+		 * 
+		 * [표현법]
+		 *
+		 * 				접근제한자 예약어 class 클래스명 extends 부모클래스명{}
+		 */
+
+	}
+
+}

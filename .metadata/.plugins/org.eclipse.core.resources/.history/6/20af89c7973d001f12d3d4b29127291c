@@ -1,0 +1,8 @@
+package com.kh.practice.set.model.compare;
+
+//Comparator 인터페이스구현
+public class SortedLottery implements Comparator<Lottery>{
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package com.kh.practice.set.model.vo;
+
+public class Lottery {
+	
+	private String name;
+	private String phone;
+	
+
+}

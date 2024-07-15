@@ -1,0 +1,13 @@
+package com.kh.practice.udp;
+
+public class UDPServer {
+
+	public static void main(String[] args) {
+		// 1.IP(PC에 지정되어있음)/포트(!!)
+		int port = 0806;
+		
+		//이서버는 0806 포토를 사용하여 요청받을 준비! 
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.kh.ch09_polymorphism;
+
+public class Parent {
+
+}

@@ -1,0 +1,16 @@
+package com.kh.ch09_polymorphism;
+
+public class PolyRun {
+
+	public static void main(String[] args) {
+		/*
+		 * *다형성 : 부모타입으로부터 파생된 여러가지 타입의 자식 객체들을
+		 * 				부모 타입 하나로 다를 수 있느 기술
+		 * 			=>편리하고 토드 길이가 감소됨
+		 * 
+		 * 
+		 */
+
+	}
+
+}

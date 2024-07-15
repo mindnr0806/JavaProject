@@ -1,0 +1,12 @@
+package com.kh.ch16_network;
+
+public class NetworkRun {
+	/*
+	 * 
+	 * 네트워크 : 여러 대의 컴퓨터들이 연결되어 있는 통신망
+	 * 			=> 네트워크를 통해서 서로 데이터를 주고받음
+	 * 
+	 */
+	
+
+}

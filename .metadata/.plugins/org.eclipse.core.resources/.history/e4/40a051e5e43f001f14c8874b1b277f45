@@ -1,0 +1,6 @@
+package com.kh.ch04_inheritance;
+
+//Fruit 클래스의 상속받을 것임 --> extends Fruit
+public class MyFruit {
+
+}

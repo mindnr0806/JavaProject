@@ -1,0 +1,170 @@
+package com.kh.practice.list.library.view;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.kh.practice.list.library.controller.BookController;
+import com.kh.practice.list.library.model.vo.Book;
+
+//화면(view)용 클래스 --> 사용자에게 데이터를 표식(출력)하거나 입력을 받는 역할
+public class BookMenu {
+	
+	private Scanner sc = new Scanner(System.in);
+	
+	private BookController bc = new BookController();
+	
+	
+	public void  mainMenu() {
+		//사용자가 직접 메인 메뉴를 선택할 수 있음.
+		//종료 전까지 반복 실행. 각 메뉴 시 해당 메소드 이동.(호출)
+		
+		System.out.println("1. 새 도서 추가 ");
+		System.out.println("2. 도서 전체 조회 ");
+		System.out.println("3. 도서 검색 조회 ");
+		System.out.println("4. 도서 삭제");
+		System.out.println("5. 도서 명 오름차순 정렬");
+		System.out.println("9. 종료 ");
+		System.out.println("메뉴 번호 선택 : ");
+		
+		int menu = sc.nextInt();
+		sc.nextLine();			// nextLine 메소드 외에는 버퍼에 엔터카(\n) 값이 남아 있어 제거하기 위해 사용
+		
+		switch(menu) {
+		case 1:
+			insertBook();	
+			break;
+		case 2:
+			selectList();
+			break;
+		case 3:
+			searchBook();
+			break;
+		case 4:
+			deleteBook();
+			break;
+		case 5:
+			ascBook();
+			break;
+		case 9:
+		System.out.println("프로그램을 종료합니다");
+		return;	//메소드 종료 --> 메소드 호출한 위치로 돌아감
+		default:
+			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+			
+		}
+		
+	}
+	
+	public void	 insertBook() {
+		System.out.println("===== 새 도서 추가 ===== ");
+		
+		System.out.println("책 정보를 입력해주세요.");
+		
+		System.out.println("도서 명 : ");
+		String title = sc.nextLine();
+		
+		System.out.println("저자 명 :");
+		String author = sc.nextLine();
+		
+		System.out.println("장르(1. 인문 / 2. 과학 / 3. 외국어 / 4. 기타) : ");
+		int category = sc.nextInt();
+		
+		System.out.println("가격 : ");
+		int price = sc.nextInt();
+		
+		//조건문(if/switch) 사용한 방식
+		String strCtg = "";
+		if(category == 1) {
+			strCtg = "인문";
+		}else if (category == 2 ) {
+			strCtg = "자연과학";
+		}else if (category == 3) {
+			strCtg = "의료";
+		}else if (category == 4) {
+			strCtg = "기타";
+		}
+		Book b = new Book(title, author, strCtg, price);
+	}
+	
+	public void selectList() {
+		// 컨트룰러의 selectList()메소드 호출후 결과값을 변수에 저장(대입)
+		ArrayList<Book> bookList = bc.selectList();
+		//조건식을 이용하여
+		//			비어있을 경우 "존재하는 도서가 없습니다." 문구 출력
+		//			비어있지 않은 경우 반복문을 통해 리스트의 Book 객체를 출력
+		if(bookList.isEmpty()) {	//isEmpty() => 리스트가 비어있는지 여부를 확인하는 메소드
+			//리스트가 비어있는 경우(bookList,isEmpty() --> true)
+			 System.out.println("존재하는 도서가 없습니다.");
+		} else {
+			//리스트가 비어있지않은 경우(bookList,isEmpty() --> false)
+			for(int i=0; i<bookList.size(); i++){  			//size() :리스트의 저장된 데이터의 길이
+				Book b = bookList.get(i);		//get(index) : 해당 index 위치의 데이터 조회
+				System.out.println(b);
+			}			
+		}			
+	}
+	
+	public void	 searchBook() {
+		//도서명을 입력받아 
+		
+		
+		System.out.print("검색 키워드 : ");
+		String keyword = sc.nextLine();
+		//컨트룰러의 searchBook 메소드로 keyword 전달 후 결과를 변수에 저장
+		ArrayList<Book> selechList = bc.searchBook(keyword);
+		
+		//조건식을 이용하여
+		//			비어있는 경우 "검색결과가 없습니다." 출력
+		//			비어있는 않는 경우 반복문을 사용하여 리스트의 Book객체 출력
+		if(selechList.isEmpty()) {
+			System.out.println("검색 결과가 없습니다.");			
+		}else {
+			for(Book b : selechList){
+				System.out.println(b);
+			}
+		}
+	}
+	
+	public void	 deleteBook() {
+		//도서 삭제 기준 : 도서명, 저자명예 해당되는 도서 석제
+		
+		System.out.print("도서명 : ");
+		String title = sc.nextLine();
+		
+		System.out.print("저자명 : ");
+		String author = sc.nextLine();
+		
+		//컨트룰러의 deleteBook 메소드로 도서명(title), 저자명(author) 값 전달우 결과를 변수에 저장
+		Book remove = bc.deleteBook(title, author);
+		
+		
+		//조건식을 이용하여 
+		//			값이 있는 경우 "성공적으로 삭제되었습니다" 출력
+		//			값이 없는 경우 "삭제할 도서를 찾지 못했습니다." 출력
+		
+		if(remove != null) {
+			//remove 변수의 값이 null이 아닌 경우 ---> 값이 있는 경우(어딘가를 참조하고 있음)
+			System.out.println("성공적으로 삭제되었습니다");
+		}else {
+			//remove 변수의 값이 null이 경우 ---> 값이 없는 경우(참조하는 곳이 없음)
+			System.out.println("삭제할 도서를 찾지 못했습니다.");
+		}
+						
+	}	
+	
+	public void	 ascBook() {
+		//컨트룰러의 ascBook() 메소드 결과에 따라
+		//			성공시 "정렬에 성공했습니다." 출력
+		//			실패시 "정렬에 실패했습니다." 출력
+		int result = bc.ascBook();
+		if(result == 1) {
+			System.out.println("정렬에 성공했습니다.");
+		}else {
+			System.out.println("정렬에 실패했습니다");
+		}
+			
+	}
+	
+	
+
+}
